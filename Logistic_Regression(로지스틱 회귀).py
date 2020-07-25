@@ -47,7 +47,7 @@ def grad(features, labels):
 EPOCHS = 1001
 
 for step in range(EPOCHS):
-    for features, labels  in iter(dataset):
+    for features, labels in iter(dataset):
         grads = grad(features, labels)
         optimizer.apply_gradients(grads_and_vars=zip(grads,[W,b]))
         if step % 100 == 0:
