@@ -34,9 +34,9 @@ def scalar_vector_product(alpha, vector_variable):
     return [alpha * element for element in vector_variable]
 
 
-print (scalar_vector_product(5,[1,2,3])) # Expected value: [5, 10, 15]
-print (scalar_vector_product(3,[2,2])) # Expected value: [6, 6]
-print (scalar_vector_product(4,[1])) # Expected value: [4]
+print(scalar_vector_product(5,[1,2,3])) # Expected value: [5, 10, 15]
+print(scalar_vector_product(3,[2,2])) # Expected value: [6, 6]
+print(scalar_vector_product(4,[1])) # Expected value: [4]
 
 
 def matrix_size_check(*matrix_variables):
@@ -49,9 +49,9 @@ matrix_y = [[2, 5], [2, 1]]
 matrix_z = [[2, 4], [5, 3]]
 matrix_w = [[2, 5], [1, 1], [2, 2]]
 
-print (matrix_size_check(matrix_x, matrix_y, matrix_z)) # Expected value: False
-print (matrix_size_check(matrix_y, matrix_z)) # Expected value: True
-print (matrix_size_check(matrix_x, matrix_w)) # Expected value: True
+print(matrix_size_check(matrix_x, matrix_y, matrix_z)) # Expected value: False
+print(matrix_size_check(matrix_y, matrix_z)) # Expected value: True
+print(matrix_size_check(matrix_x, matrix_w)) # Expected value: True
 
 
 def is_matrix_equal(*matrix_variables):
@@ -62,8 +62,8 @@ def is_matrix_equal(*matrix_variables):
 matrix_x = [[2, 2], [2, 2]]
 matrix_y = [[2, 5], [2, 1]]
 
-print (is_matrix_equal(matrix_x, matrix_y, matrix_y, matrix_y)) # Expected value: False
-print (is_matrix_equal(matrix_x, matrix_x)) # Expected value: True
+print(is_matrix_equal(matrix_x, matrix_y, matrix_y, matrix_y)) # Expected value: False
+print(is_matrix_equal(matrix_x, matrix_x)) # Expected value: True
 
 
 def matrix_addition(*matrix_variables):
@@ -76,8 +76,8 @@ matrix_x = [[2, 2], [2, 2]]
 matrix_y = [[2, 5], [2, 1]]
 matrix_z = [[2, 4], [5, 3]]
 
-print (matrix_addition(matrix_x, matrix_y)) # Expected value: [[4, 7], [4, 3]]
-print (matrix_addition(matrix_x, matrix_y, matrix_z)) # Expected value: [[6, 11], [9, 6]]
+print(matrix_addition(matrix_x, matrix_y)) # Expected value: [[4, 7], [4, 3]]
+print(matrix_addition(matrix_x, matrix_y, matrix_z)) # Expected value: [[6, 11], [9, 6]]
 
 
 def matrix_subtraction(*matrix_variables):
@@ -90,8 +90,8 @@ matrix_x = [[2, 2], [2, 2]]
 matrix_y = [[2, 5], [2, 1]]
 matrix_z = [[2, 4], [5, 3]]
 
-print (matrix_subtraction(matrix_x, matrix_y)) # Expected value: [[0, -3], [0, 1]]
-print (matrix_subtraction(matrix_x, matrix_y, matrix_z)) # Expected value: [[-2, -7], [-5, -2]]
+print(matrix_subtraction(matrix_x, matrix_y)) # Expected value: [[0, -3], [0, 1]]
+print(matrix_subtraction(matrix_x, matrix_y, matrix_z)) # Expected value: [[-2, -7], [-5, -2]]
 
 
 def matrix_transpose(matrix_variable):
@@ -134,7 +134,7 @@ print(is_product_availability_matrix(matrix_x, matrix_x)) # Expected value: True
 def matrix_product(matrix_a, matrix_b):
     if is_product_availability_matrix(matrix_a, matrix_b) == False:
         raise ArithmeticError
-    return [[sum(a*b for a, b in zip(row_A, column_b)) for column_b in zip(*matrix_b)] for row_a in matrix_a]
+    return [[sum(a*b for a, b in zip(row_a, column_b)) for column_b in zip(*matrix_b)] for row_a in matrix_a]
 
 
 matrix_x= [[2, 5], [1, 1]]
